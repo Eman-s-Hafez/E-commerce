@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky top-0 w-100   " style="z-index: 99;">
+    <div class="d-flex align-items-center ms-5  me-5 position-relative">
+      <img src="/logo.ico" alt="" width="70" height="70" class="d-inline-block align-text-top" >
+      <h1  class="fs-5 position-absolute start-50 ms-3" ><a class="navbar-brand ms-0"  routerLink="/">  ICONIC </a></h1>
+    </div>       
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0 ms-3" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              
+              <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive="text-danger" [routerLinkActiveOptions]="{exact:true}">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link d" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLink="/category/winter" routerLinkActive="text-danger">
+                    Winter
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Hoodie</a></li>
+                  <li><a class="dropdown-item" href="#">Jacket</a></li>
+                  <li><a class="dropdown-item" href="#">pullover</a></li>
+                  <li><a class="dropdown-item" href="#">Basic </a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link d" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"  routerLink="/category/shirts" routerLinkActive="text-danger">
+                    Shirts
+                </a>
+               
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#"> Plain shirt</a></li>
+                  <li><a class="dropdown-item" href="#">Printed shirts</a></li>
+                  <li><a class="dropdown-item" href="#">Short sleeve shirts</a></li>
+                  <li><a class="dropdown-item" href="#">Long sleeve shirts</a></li>
+                  <li><a class="dropdown-item" href="#">Striped shirt</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link d" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"  routerLink="/category/trousers" routerLinkActive="text-danger">
+                    Trousers
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Jeans</a></li>
+                  <li><a class="dropdown-item" href="#">Cargo</a></li>
+                  <li><a class="dropdown-item" href="#">Gabardine</a></li>
+                  <li><a class="dropdown-item" href="#">Classic</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/category/sweetpants" routerLinkActive="text-danger">Sweetpants</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link d" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLink="/accessories" routerLinkActive="text-danger" >
+                    Accessories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Shoes</a></li>
+                  <li><a class="dropdown-item" href="#">Wallet</a></li>
+                  <li><a class="dropdown-item" href="#">Perfume</a></li>
+                  <li><a class="dropdown-item" href="#">Belt</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/pages/returnexchange" routerLinkActive="text-danger">Return/Exchange</a>
+              </li>
+
+          </ul>
+        </div>
+        <div class="offset-4 d-flex align-items-center text-dark ">
+            <a class="text-dark " routerLink="/login"><i class="fa-solid fa-user me-4"></i></a>
+            <i class="fa-solid fa-cart-shopping me-4 "></i>
+            <a class="text-dark" (click)="showSearch()"><i class="fa-solid fa-magnifying-glass" style="cursor: pointer;" ></i></a>
+        </div>
+       
+      
+      
+   
+    </nav>
+    <div *ngIf="isVisable" class="col-12 col-md-6 m-auto mb-2">
+      <input type="text" class=" form-control text-center" #searchInput (keyup.enter)="handleSearch(searchInput)" placeholder="search for your passion here..." >
+    </div>

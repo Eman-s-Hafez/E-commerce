@@ -1,0 +1,57 @@
+<div class="container justify-content-around  align-items-center">
+    <div class="row">
+    <div class="col-12 col-md-6 rounded p-3 border mt-4">
+        <div class="p-3 mb-2 bg-dark text-white"><h2>How to Return/Exchange?</h2></div>
+        <ol class="list-group list-group-numbered">
+            
+            <!-- <li class="list-group-item active" aria-current="true">How to Return/Exchange?</li> -->
+           
+            <li class="list-group-item p-3 mb-2 bg-dark-subtle text-dark">Write order-No</li>
+            <li class="list-group-item p-3 mb-2 bg-body-secondary">write the phone number which you made the order from it</li>
+            <li class="list-group-item p-3 mb-2 bg-body-tertiary">After the order has apeared check the item you mant to return or exchange</li>
+            <li class="list-group-item p-3 mb-2 bg-body text-body">choose return or exchange</li>
+          </ol>
+          <div class="d-flex justify-content-around mb-2  text-danger"><h3>Conditions For Return/Excange</h3><img src="check2.gif" width="50px"height="50px">
+       
+        </div>
+        <ul><li>Make sure that the product is in good case before return /exchange</li>
+            <li>Return/Exchange allowed only with in 14 days from the order date</li>
+            <li>Products purchased through the offer are not permitted to be exchanged or returned except in the case of manufacturing defects</li>
+            <li>The customer bears the shipping costs when exchanging or returning</li>
+            
+            
+            
+            
+        </ul>
+    </div>
+
+<div class="col-12 col-md-6 align-items-center "><div class="card shadow-sm p-4 mt-4 bg-body-tertiary " >
+      <h4 class="text-center mb-4 mt-5">Return/Excange  </h4>
+      <p class="text-center mb-4 text-secondary">please Enter Your order No and your phone</p>
+      <div class="container">
+      <form class="row gy-5 mt-3" [formGroup]="searchOrderForm" (ngSubmit)="handleSubmit()"><div class="col-12">
+
+      <label class=" fs-5 fw-semibold">Order No</label>  
+      <input type="text" class="form-control gx-3 " placeholder="Enter Order No" formControlName="order_id">
+      
+    </div>
+    <div class="col-12 text-danger" *ngIf="isSubmitted&&searchOrderForm.controls.order_id.invalid">
+        <p *ngIf="searchOrderForm.controls.order_id.errors?.['required']">order_id is required</p>
+        <!-- <p *ngIf="searchOrderForm.controls.order_id.errors?.['pattern']">inumbersonly</p> -->
+        <!-- <p *ngIf="searchOrderForm.controls.order_id.errors?.['minlength']">at least 3 digit</p> -->
+        
+        </div>
+        <div class="col-12">
+
+            <label class=" fs-5 fw-semibold">Phone No</label><input type="text" class="form-control gx-3" placeholder="Enter your Phone"formControlName="phone"></div>
+            <div class="col-12 text-danger" *ngIf="isSubmitted&&searchOrderForm.controls.phone.invalid">
+                <p *ngIf="searchOrderForm.controls.phone.errors?.['required']">phone is required</p>
+                <p *ngIf="searchOrderForm.controls.phone.errors?.['pattern']">invalid phone number</p>
+                
+                </div>
+            <button class="btn btn-danger mb-5">Find Order</button>
+            
+
+      </form></div>
+      </div></div></div>
+</div>

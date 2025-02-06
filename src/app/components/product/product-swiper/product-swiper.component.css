@@ -1,0 +1,36 @@
+/* swiper.component.css */
+.swiper-container {
+    width: 100%;
+    height: 300px; /* Adjust the height of the slider */
+    margin: auto;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .swiper-button-next, .swiper-button-prev {
+    width: 40px;
+    height: 40px; 
+  }
+  .swiper-button-prev::after {
+    font-size: 18px; 
+    font-weight: bold;
+    color: lightgray;
+  }
+  .swiper-button-next::after {
+    font-size: 18px; 
+    font-weight: bold;
+    color: lightgray;
+  }
+  .swiper-pagination {
+    bottom: 10px;
+  }
+  .childProduct:hover{
+    cursor: pointer;
+  }
+  

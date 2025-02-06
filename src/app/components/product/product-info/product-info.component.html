@@ -1,0 +1,20 @@
+<div class="">
+    <div class=" border-0">
+        <div class="row position-relative">
+            <img src={{productInput?.imagLink}} class="w-100" alt="Product Image" style="object-fit: cover;">
+            <div class="badge bg-danger position-absolute top-0 end-0 rounded-0 fw-light w-auto px-3 py-1">- 40%</div>
+        </div>
+        <div class="d-flex flex-column align-items-center mt-3">
+        <h5 class="card-title text-center text-capitalize fs-6 cursor-pointer">{{productInput?.title}}</h5>
+        <p class="card-text text-center text-capitalize fs-6 text-danger mt-1">{{productInput?.price}}</p>
+        <div class="button-container text-capitalize px-4">
+            <button class="btn btn-primary add-to-cart rounded-0 px-5">
+              <span class="text">Add to Cart</span>
+              <span class="icon-container bg-danger">
+                <i class="fa-solid fa-cart-shopping text-white"></i>
+              </span>
+            </button>
+          </div>
+        </div>       
+    </div>
+</div>

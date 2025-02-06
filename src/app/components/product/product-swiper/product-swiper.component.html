@@ -1,0 +1,14 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="swiper-containerr my-6 position-relative col-12 h-auto overflow-hidden">
+            <div class="swiper-wrapper col-12">
+                <div class="swiper-slide bg-transparent" *ngFor="let product of products">
+                    <app-product-info [productInput]="product" class="childProduct"
+                    [routerLink]="['/product-card', product.id]">></app-product-info>
+                </div>
+            </div>
+            <div class="swiper-button-next bg-dark"></div>
+            <div class="swiper-button-prev bg-dark"></div>
+        </div>    
+    </div>
+</div>

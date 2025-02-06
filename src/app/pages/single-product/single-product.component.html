@@ -1,0 +1,31 @@
+<app-show-product class="mt-5"></app-show-product>
+<div class="container ">
+
+    <!-- Start section of questions and answer -->
+     <h3 class="text-center customMT mb-4">الاستفسارات الشائعة</h3>
+    <div class="row justify-content-center mb-5">
+        <div class="col-12 col-md-10 ">
+            <div class="row flex-row-reverse  justify-content-between bg-light  mb-3"
+                *ngFor="let item of questions ; let i =index" (click)="toggleAnswer(i)">
+                <p class="col-9 text-end m-0 py-1 pe-4 fs-5">{{item.question}}</p>
+                <div class="col-3 col-md-1 ps-0 ">
+                    <a class="btn btn-dark p-0 fs-4 col-6" data-bs-toggle="collapse" [href]="'q'+i" role="button"
+                        aria-expanded="false" [attr.aria-controls]="'q'+i">
+                        {{openAnswer[i]? "-":"+"}}
+                    </a>
+                </div>
+                <div class=" mt-2 " *ngIf="openAnswer[i]" [id]="'q'+i">
+                    <div class="text-end  border-0 pe-5 pb-3 text-body-tertiary">
+                        {{item.answer}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End section of questions and answer -->
+
+
+
+    <h3 class="text-center customMT mb-3" >منتجات تانيه هتعجبك</h3>
+    <app-product-swiper class="mt-5"></app-product-swiper>
+</div>

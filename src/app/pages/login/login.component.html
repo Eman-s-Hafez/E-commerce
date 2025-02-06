@@ -1,0 +1,49 @@
+
+  <div class="container d-flex justify-content-around  align-items-center vh-100 custom-gradient">
+    <div class="rounded p-3 border " >
+      <img src="login.png" alt="" style="width: 500px ; height: 500px;">
+    </div>
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 400px;">
+      <h4 class="text-center mb-4">Login for your ICONIC account </h4>
+      <form #loginForm="ngForm" (ngSubmit)="submitForm(loginForm)">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" 
+          required
+          [(ngModel)]="loginModel.email"
+          name="email"
+          #userEmail="ngModel">
+        </div>
+        <div class="alert alert-danger mt-2 p-2" *ngIf="loginForm?.submitted && userEmail?.invalid">
+          <p class="mb-1" *ngIf="userEmail?.errors?.['required']">Email is required</p>
+          <p class="mb-1" *ngIf="userEmail?.errors?.['email']">Enter a valid email</p>
+        </div>
+  
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" 
+          required
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          [(ngModel)]="loginModel.password"
+          name="password"
+          #userPassword="ngModel">
+        </div>
+
+        <div class="alert alert-danger mt-2 p-2" *ngIf="loginForm?.submitted && userPassword?.invalid">
+          <p class="mb-1" *ngIf="userPassword?.errors?.['required']">Password is required</p>
+          <p class="mb-1" *ngIf="userPassword?.errors?.['pattern']">
+            Password must be at least 8 characters and contain uppercase, lowercase, and numbers
+          </p>    </div>
+  
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
+      <p class="text-center mt-3">
+        <a href="#">Forgot password?</a> | <a routerLink="/signup">Sign up</a>
+      </p>
+    </div>
+  </div>

@@ -1,0 +1,109 @@
+<div class="container">
+    <div class="row flex-row-reverse">
+        <div class="col-12 col-md-5">   
+            <div>
+                <img [src]= "product[0].imagLink"/>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 py-5 text-end productInfo">
+            <h5 class=" mt-5 mb-4">{{product[0].title}}</h5>
+            <div class="row justify-content-between mb-4">
+                <div class="col-4">
+                    <span class="me-1">(2)</span>
+                    <i class="fa-solid fa-star me-1 text-warning"></i>
+                    <i class="fa-solid fa-star me-1 text-warning"></i>
+                    <i class="fa-solid fa-star me-1 text-warning"></i>
+                    <i class="fa-solid fa-star me-1 text-warning"></i>
+                </div>
+                <div class="col-3 text-end">
+                    <span class="fs-4 text-body-secondary">{{product[0].price}}</span>
+                </div>
+            </div>
+            <p>Shipping calculated at checkout.</p>
+            <p class="mb-4"> هودي الوضوء الخامة: ميلتون المادة الداخلية: واسعة (أوفرسايز) المقاس: رجال الجنس: رجال
+                الأكمام: طويلة
+                الرقبة: قبعة (كابيشو) النقشة: غير متوفرة الإغلاق: كاجوال النمط: شتوي الموسم: شتاء</p>
+            <h6>اللون: Dark Green</h6>
+            <div class="productSize mb-4">
+                <div class="tab-content mb-3" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-m" role="tabpanel" aria-labelledby="pills-m-tab"
+                        tabindex="0">
+                        <h6>M :المقاس</h6>
+                    </div>
+                    <div class="tab-pane fade" id="pills-l" role="tabpanel" aria-labelledby="pills-l-tab" tabindex="0">
+                        <h6>L :المقاس</h6>
+                    </div>
+                    <div class="tab-pane fade" id="pills-xl" role="tabpanel" aria-labelledby="pills-xl-tab"
+                        tabindex="0">
+                        <h6>XL :المقاس</h6>
+                    </div>
+                    <div class="tab-pane fade" id="pills-xxl" role="tabpanel" aria-labelledby="pills-xxl-tab"
+                        tabindex="0">
+                        <h6>XXL :المقاس</h6>
+                    </div>
+                    <div class="tab-pane fade" id="pills-3xl" role="tabpanel" aria-labelledby="pills-3xl-tab"
+                        tabindex="0">
+                        <h6>3XL :المقاس</h6>
+                    </div>
+                </div>
+                <ul class="nav nav-pills mb-3 flex-row-reverse " id="pills-tab" role="tablist">
+                    <li class="nav-item border  rounded " role="presentation">
+                        <button class="nav-link active" id="pills-m-tab" data-bs-toggle="pill" data-bs-target="#pills-m"
+                            type="button" role="tab" aria-controls="pills-m" aria-selected="true">M</button>
+                    </li>
+                    <li class="nav-item border  rounded me-2" role="presentation">
+                        <button class="nav-link" id="pills-l-tab" data-bs-toggle="pill" data-bs-target="#pills-l"
+                            type="button" role="tab" aria-controls="pills-l" aria-selected="false">L</button>
+                    </li>
+                    <li class="nav-item border  rounded me-2" role="presentation border">
+                        <button class="nav-link" id="pills-xl-tab" data-bs-toggle="pill" data-bs-target="#pills-xl"
+                            type="button" role="tab" aria-controls="pills-xl" aria-selected="false">XL</button>
+                    </li>
+                    <li class="nav-item border  rounded me-2" role="presentation">
+                        <button class="nav-link" id="pills-xxl-tab" data-bs-toggle="pill" data-bs-target="#pills-xxl"
+                            type="button" role="tab" aria-controls="pills-xxl" aria-selected="false">XXL</button>
+                    </li>
+                    <li class="nav-item border  rounded me-2" role="presentation">
+                        <button class="nav-link" id="pills-3xl-tab" data-bs-toggle="pill" data-bs-target="#pills-3xl"
+                            type="button" role="tab" aria-controls="pills-3xl" aria-selected="false">3XL</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="row flex-row-reverse addProudactBut mb-4">
+                <div class="col-3 d-flex fs-5 justify-content-between align-items-center p-0 border rounded-pill">
+                    <button type="button" class="btn fs-5 ">-</button> <span>1</span> <button type="button"
+                        class="btn fs-5">+</button>
+                </div>
+                <button type="button" class=" mx-3 col-4 border rounded-pill btn btn-dark fs-5">Add to cart</button>
+            </div>
+            <p class="mb-1">Black, Baby Blue, Dark Green, Beige, Silver, Eggplant, Iron, Mint, Dark Blue, Coffee :اللون
+            </p>
+            <p class="mb-1"> M, L, XL, XXL, 3XL :المقاس</p>
+            <p class="mb-1"> SKU: Ablution, Milton, Hoodie, Basic-Dark, Green-M</p>
+            <p class="mb-1"> Availability : In Stock</p>
+            <p class="mb-1">Categories: Basic, Sweatshirt, New OG24_All, OG24_Hoodie, OG_Winter24 Winter, Collection</p>
+            <p class="mb-1"> Tags: Capicho, Casual, Fur, Long Sleeve, Men Milton & Cotton, N/A ,OG24_Hoodie</p>
+            <p class="mb-4"> OG24_Winter, Oversize, Plain, Winter</p>
+            <div class="row socialMedia flex-row-reverse">
+                <div class="col-1 ms-2   d-flex align-items-center  justify-content-center  border  rounded">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="col-1 ms-2   d-flex align-items-center  justify-content-center  border  rounded">
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+                <div class="col-1 ms-2   d-flex align-items-center  justify-content-center  border  rounded">
+                    <i class="fa-brands fa-tumblr"></i>
+                </div>
+                <div class="col-1 ms-2   d-flex align-items-center  justify-content-center  border  rounded">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </div>
+                <div class="col-1 ms-2 d-flex align-items-center  justify-content-center border  rounded">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+                <div class="col-1 ms-2 d-flex align-items-center justify-content-center  border  rounded">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

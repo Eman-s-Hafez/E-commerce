@@ -1,0 +1,70 @@
+* {
+    font-family: 'Cairo' !important;
+}
+.fa, .fa-solid, .fa-cart-arrow-down {
+  font-family: 'Font Awesome 5 Free', 'Font Awesome', sans-serif !important;
+}
+h5:hover {
+    color: #56cfe1;
+    cursor: pointer;
+}
+p:hover{
+    cursor: pointer;
+}
+.button-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+  .add-to-cart {
+    position: relative;
+    background-color: black; /* Blue background for button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures the child elements are clipped */
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .add-to-cart:hover {
+    background-color: black; /* Change background color on hover */
+  }
+
+  /* Text Content */
+  .add-to-cart .text {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Icon Container */
+  .add-to-cart .icon-container {
+    position: absolute;
+    top: 100%; /* Position below the button */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #28a745; /* Green background for the new view */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    transform: translateY(0);
+  }
+
+  .add-to-cart i {
+    font-size: 20px;
+  }
+
+  /* Hover Effect */
+  .add-to-cart:hover .text {
+    transform: translateY(-100%); /* Slide out text */
+    opacity: 0; /* Fade out text */
+  }
+
+  .add-to-cart:hover .icon-container {
+    transform: translateY(-100%); /* Slide in the icon container from the bottom */
+  }

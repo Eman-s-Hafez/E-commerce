@@ -1,0 +1,63 @@
+<footer class="bg-black text-white py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- Menu Section -->
+      <div class="col-12 col-md-4 col-lg-4">
+        <span class="d-block fw-bold mb-3">Menu</span>
+        <ul class="list-unstyled">
+          <li class=""><a href="#" class="text-white-50 text-decoration-none">About Fit & Flair</a></li>
+          <li class="mt-1"><a href="#" class="text-white-50 text-decoration-none">TC and Privacy Policy</a></li>
+          <li class="mt-1"><a href="#" class="text-white-50 text-decoration-none">Refund policy</a></li>
+          <li class="mt-1"><a href="#" class="text-white-50 text-decoration-none">Return</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="col-12 col-md-4 col-lg-4">
+        <span class="d-block fw-bold mb-3">Contact</span>
+        <ul class="list-unstyled position-relative">
+          <i class="fa-solid fa-house text-white-50 position-absolute start-0 mt-1"></i>
+          <li><a href="#" class="text-white-50 text-decoration-none ms-4">OUR STORES</a></li>
+          <i class="fa-solid fa-envelope text-white-50 position-absolute start-0 mt-2"></i>
+          <li class="mt-1"><a href="mailto:customer.service@fitflair.com" class="text-white-50 text-decoration-none ms-4">customer.service&#64;fitflair.com</a></li>
+          <i class="fa-solid fa-phone text-white-50 position-absolute start-0 mt-2"></i>
+          <li class="mt-1"><a href="#" class="text-white-50 text-decoration-none ms-4">+20 100 (0000-000)</a></li>
+          <i class="fa-solid fa-location-dot text-white-50 position-absolute start-0 mt-2"></i>
+          <li class="mt-1"><a href="#" class="text-white-50 text-decoration-none ms-4">October City Giza, Egypt</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="col-12 col-md-4 col-lg-4">
+        <span class="d-block fw-bold mb-3">Subscribe to our newsletter</span>
+        <form #loginForm="ngForm" (ngSubmit)="handleSubmit(loginForm)">
+          <div class="mb-3 position-relative">
+            <input
+              type="email"
+              class="form-control bg-white text-black border-dark w-80 rounded-0 pe-5"
+              placeholder="Enter your email"
+              [(ngModel)]="model.email"
+              name="email"
+              #userEmail="ngModel"
+              required
+              email
+            />
+            <button type="submit" class="btn btn-link position-absolute top-50 end-0 translate-middle-y me-4 p-0">
+              <i class="fa-solid fa-arrow-right-long text-black"></i>
+            </button>
+            <div id="emailHelp" class="alert alert-danger pb-0   pt-0 rounded-0  position-absolute" style="width: 416px;"   *ngIf="loginForm?.submitted &&  userEmail?.invalid">
+              <p *ngIf="userEmail?.errors?.['required']">Email is required</p>
+              <p *ngIf="userEmail?.errors?.['email']">Enter a valid email</p>
+            </div>
+          </div>
+
+          <div class="ms-5 mt-5">
+            <a href=""><i class="fa-brands fa-facebook-f text-white ms-5"></i></a>
+            <a href=""><i class="fa-brands fa-instagram text-white ms-5"></i></a>
+            <a href=""><i class="fa-brands fa-youtube text-white ms-5"></i></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>

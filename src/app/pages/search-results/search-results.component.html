@@ -1,0 +1,15 @@
+
+<div class="container">
+    <div class=" flex-wrap row justify-content-around gy-3">
+        <div class="card col-3 me-1"  *ngFor="let product of products">
+            <img src="{{product.imagLink}}" class="card-img-top" alt="...">
+            <div class="card-body align-items-center">
+              <p class="card-text">{{product.title}}</p>
+              <h5 class="card-title">{{product.price}}</h5>
+        
+              <a href="#" class="btn btn-primary">Buy now !</a>
+            </div>
+          </div>    
+    </div>
+</div>
+
